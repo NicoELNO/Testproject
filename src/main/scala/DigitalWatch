@@ -1,4 +1,4 @@
-class DigitalWatch(frequency: Int) extends Module {
+class DigitalWatch(freq: Int) extends Module {
   val io = IO(new Bundle {
     val time = Output(new Bundle {
       val hours = UInt(5.W)
@@ -7,8 +7,8 @@ class DigitalWatch(frequency: Int) extends Module {
     })
   })
 
-  val divider = Module(new ClockDiv(frequency))
-  val counter = Module(new TimeCounter)
+  val divider = Module(new ClockDiv(freq))
+  val counter = Module(new Counter)
 
   counter.io.tick := divider.io.out
   io.time := counter.io.time
