@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "Chisel Template - please change"      # Project title
+  title:        "Chisel Template - PWM"      # Project title
   author:       "Martin Schoeberl - please change"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "A Chisel Template for a Tiny Tapeout design. Change to your design."      # One line description of what your project does
