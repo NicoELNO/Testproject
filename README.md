@@ -1,3 +1,27 @@
+# Clock Counter 
+Clock counter which can be started, stoped and reset
+![image](https://github.com/NicoELNO/Testproject/assets/106771636/50566694-4871-49d7-a615-5ef2319b942e)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg)
 
 # Tiny Tapeout Chisel Project Template
