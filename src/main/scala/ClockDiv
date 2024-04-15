@@ -1,7 +1,7 @@
 import chisel3._
 import chisel3.util._
 
-class ClockDiv(freq: Int = 10000000) extends Module {
+class ClockDiv(freq: Int) extends Module {
   val io = IO(new Bundle {
     val out = Output(Bool())
   })
