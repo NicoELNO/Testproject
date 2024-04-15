@@ -15,5 +15,6 @@ class DigitalWatch(freq: Int) extends Module {
 }
 
 object DigitalWatch extends App {
-  (new chisel3.stage.ChiselStage).emitVerilog(new DigitalWatch(100000000)) // Assume 100 MHz input clock
+  emitVerilog(new DigitalWatch(100000000)), Array("--target-dir", "src")) // Assume 100 MHz input clock
 }
+
