@@ -5,6 +5,7 @@ Clock counter which can be started, stoped and reset
 ![image](https://github.com/NicoELNO/Testproject/assets/106771636/50566694-4871-49d7-a615-5ef2319b942e)
 
 ## Very sumple block diagram
+![image](https://github.com/NicoELNO/Testproject/assets/106771636/efffe0f9-7737-4cc2-a08b-9e4bfca9b2b3)
 
 
 
