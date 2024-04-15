@@ -1,0 +1,36 @@
+class Counter extends Module {
+  val io = IO(new Bundle {
+    val tick = Input(Bool())
+    val time = Output(new Bundle {
+      val hours = UInt(5.W)
+      val minutes = UInt(6.W)
+      val seconds = UInt(6.W)
+    })
+  })
+
+  val seconds = RegInit(0.U(6.W))
+  val minutes = RegInit(0.U(6.W))
+  val hours = RegInit(0.U(5.W))
+
+  when(io.tick) {
+    when(seconds === 59.U) {
+      seconds := 0.U
+      when(minutes === 59.U) {
+        minutes := 0.U
+        when(hours === 23.U) {
+          hours := 0.U
+        }.otherwise {
+          hours := hours + 1.U
+        }
+      }.otherwise {
+        minutes := minutes + 1.U
+      }
+    }.otherwise {
+      seconds := seconds + 1.U
+    }
+  }
+
+  io.time.seconds := seconds
+  io.time.minutes := minutes
+  io.time.hours := hours
+}
