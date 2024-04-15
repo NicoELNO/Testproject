@@ -1,0 +1,19 @@
+class DigitalWatch(frequency: Int) extends Module {
+  val io = IO(new Bundle {
+    val time = Output(new Bundle {
+      val hours = UInt(5.W)
+      val minutes = UInt(6.W)
+      val seconds = UInt(6.W)
+    })
+  })
+
+  val divider = Module(new ClockDiv(frequency))
+  val counter = Module(new TimeCounter)
+
+  counter.io.tick := divider.io.out
+  io.time := counter.io.time
+}
+
+object DigitalWatch extends App {
+  (new chisel3.stage.ChiselStage).emitVerilog(new DigitalWatch(100000000)) // Assume 100 MHz input clock
+}
