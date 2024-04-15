@@ -4,6 +4,7 @@ Clock counter which can be started, stoped and reset
 ## Very simple FSM
 ![image](https://github.com/NicoELNO/Testproject/assets/106771636/50566694-4871-49d7-a615-5ef2319b942e)
 
+## Very sumple block diagram
 
 
 
